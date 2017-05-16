@@ -3,10 +3,10 @@
  */
 
 const assert = require('chai').assert;
-const app = require('../app');
+const _ = require('lodash/');
 
-describe('App', () => {
-  it('should return hello', () => {
-    assert.equal(app(), 'hello');
+describe('App test', function() {
+  it('should return false', function() {
+    assert.equal(_.isArray({}), false);
   })
 });
