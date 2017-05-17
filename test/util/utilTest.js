@@ -3,10 +3,10 @@
  */
 
 const assert = require('chai').assert;
-const app = require('../app');
+const _util = require('lodash/util');
 
 describe('App', () => {
   it('should return hello', () => {
-    assert.equal(app(), 'hello');
+    assert.equal('', 'hello');
   })
 });
