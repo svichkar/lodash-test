@@ -3,13 +3,16 @@
  */
 
 const assert = require('chai').assert;
+const expect = require("chai").expect;
 const _array = require('lodash/array');
 
-describe('App', function () {
+describe('Array module', function () {
 
-  it('should return hello', function () {
-    var chunkArray = _array.chunk(['a', 'b', 'c', 'd'], 2);
-    console.log(chunkArray);
-    assert.equal(chunkArray.length, 2);
-  })
+  context('#chunk()', function () {
+
+    it('Should split `array` into groups the length of `size`.', function () {
+      var chunkArray = _array.chunk(['a', 'b', 'c', 'd'], 2);
+      expect(chunkArray).to.have.length(2);
+    });
+  });
 });

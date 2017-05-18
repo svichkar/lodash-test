@@ -9,13 +9,16 @@
   "license": "ISC",
   "devDependencies": {
     "brfs": "^1.4.3",
+    "browserify": "^14.3.0",
     "chai": "^3.5.0",
     "karma": "^1.7.0",
     "karma-browserify": "^5.1.1",
     "karma-mocha": "^1.3.0",
     "karma-phantomjs-launcher": "^1.0.4",
+    "lodash": "^4.17.4",
     "mocha": "^3.4.1",
     "phantomjs": "^2.1.7",
-    "requirejs": "^2.3.3"
+    "requirejs": "^2.3.3",
+    "should": "^11.2.1"
   }
 }
