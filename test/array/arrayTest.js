@@ -21,7 +21,7 @@ describe('Array module', function () {
     it('Should split `array` into single element groups when `size` is not specified.', function () {
 
       const chunkArray = _array.chunk(array);
-      expect(chunkArray).to.have.length(array.length+1);
+      expect(chunkArray).to.have.length(array.length);
     });
 
     it('Should not change existing array', function () {
