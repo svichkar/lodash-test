@@ -2,8 +2,8 @@
  * Created by svichkar on 5/15/17.
  */
 
-const assert = require('chai').assert;
-const _collection = require('lodash/collection');
+var assert = require('chai').assert;
+var _collection = require('lodash/collection');
 
 describe('App', function () {
   it('should return hello', function () {
