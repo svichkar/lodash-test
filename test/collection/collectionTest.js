@@ -5,7 +5,7 @@
 var assert = require('chai').assert;
 var _collection = require('lodash/collection');
 
-describe('App', function () {
+describe('Collection module', function () {
   it('should return hello', function () {
     console.log();
     assert.equal(2, 2);

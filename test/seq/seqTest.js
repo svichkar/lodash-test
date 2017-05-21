@@ -3,9 +3,9 @@
  */
 
 const assert = require('chai').assert;
-const _lang = require('lodash/lang');
+const _seq = require('lodash/seq');
 
-describe('App', function () {
+describe('Seq module', function () {
   it('should return hello', function () {
     console.log();
     assert.equal(2, 2);

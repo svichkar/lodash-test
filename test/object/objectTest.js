@@ -3,9 +3,9 @@
  */
 
 const assert = require('chai').assert;
-const _lang = require('lodash/lang');
+const _object = require('lodash/object');
 
-describe('App', function () {
+describe('Object module', function () {
   it('should return hello', function () {
     console.log();
     assert.equal(2, 2);

@@ -5,7 +5,7 @@
 const assert = require('chai').assert;
 const _lang = require('lodash/lang');
 
-describe('App', function () {
+describe('Lang module', function () {
   it('should return hello', function () {
     console.log();
     assert.equal(2, 2);

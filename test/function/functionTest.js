@@ -5,7 +5,7 @@
 const assert = require('chai').assert;
 const _function = require('lodash/function');
 
-describe('App', function () {
+describe('Function module', function () {
   it('should return hello', function () {
     console.log();
     assert.equal(2, 2);

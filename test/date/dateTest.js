@@ -5,7 +5,7 @@
 const assert = require('chai').assert;
 const _date = require('lodash/date');
 
-describe('App', function () {
+describe('Date module', function () {
   it('should return hello', function () {
     console.log();
     assert.equal(2, 2);
