@@ -2,7 +2,6 @@
  * Created by svichkar on 5/15/17.
  */
 
-const assert = require('chai').assert;
 const expect = require("chai").expect;
 const _array = require('lodash/array');
 
