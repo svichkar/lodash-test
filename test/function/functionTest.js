@@ -7,6 +7,23 @@ const _function = require('lodash/function');
 
 describe('Function module', function () {
 
+  context('#ary(func, [n=func.length])', function () {
+
+    it('Should ignore any additional arguments', function () {
+
+      //given
+      let array = ['1', '2', '3'];
+      let aryFunc = _function.ary(parseInt, 1);
+
+      //when
+      let result = array.map(aryFunc);
+
+      //then
+      expect(result).to.be.eql([1, 2, 3]);
+    });
+
+  });
+
   context('#after(n, func)', function () {
 
     it('Should execute initial function after 5th call', function () {
@@ -160,9 +177,11 @@ describe('Function module', function () {
 
       //given
       let count = 0;
+
       function increment() {
         return count++;
       }
+
       let onlyOnce = _function.once(increment);
 
       //when
@@ -184,12 +203,15 @@ describe('Function module', function () {
       function returnArray(x, y) {
         return [x, y];
       }
-      function increment (v) {
+
+      function increment(v) {
         return v + 1;
       }
-      function decrement (v) {
+
+      function decrement(v) {
         return v - 1;
       }
+
       let over = _function.overArgs(returnArray, [increment, decrement]);
 
       //when
@@ -209,6 +231,7 @@ describe('Function module', function () {
       function returnArray(x, y, z) {
         return [x, y, z];
       }
+
       let restFunc = _function.rest(returnArray, 2);
 
       //when
@@ -227,8 +250,9 @@ describe('Function module', function () {
 
       //given
       function returnArray(x, y, z) {
-        return [x + 1, y + 1 , z + 1];
+        return [x + 1, y + 1, z + 1];
       }
+
       let spreadFunc = _function.spread(returnArray);
 
       //when
@@ -236,6 +260,23 @@ describe('Function module', function () {
 
       //then
       expect(result).to.be.eql([2, 3, 4]);
+    });
+
+  });
+
+  context('#unary(func)', function () {
+
+    it('Should accepts up to one argument', function () {
+
+      //given
+      let array = ['1', '2', '3'];
+      let unaryFunc = _function.unary(parseInt);
+
+      //when
+      let result = array.map(unaryFunc);
+
+      //then
+      expect(result).to.be.eql([1, 2, 3]);
     });
 
   });
