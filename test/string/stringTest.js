@@ -9,7 +9,7 @@ describe('String module', function () {
 
   context("#camelCase([string=''])", function () {
 
-    it('', function () {
+    it('Should convert string camel case', function () {
 
       //given
       let string = '__FOO_BAR__2';

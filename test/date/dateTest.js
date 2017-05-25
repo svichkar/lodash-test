@@ -2,12 +2,23 @@
  * Created by svichkar on 5/15/17.
  */
 
-const assert = require('chai').assert;
+const expect = require('chai').expect;
 const _date = require('lodash/date');
 
 describe('Date module', function () {
-  it('should return hello', function () {
-    console.log();
-    assert.equal(2, 2);
-  })
+
+  context('#now()', function () {
+
+    it('Should return number of milliseconds that have elapsed since the Unix epoch', function () {
+
+      //given
+
+      //when
+      let date = _date.now();
+
+      //then
+      expect(date).to.be.eq(Date.now());
+    });
+  });
+
 });
