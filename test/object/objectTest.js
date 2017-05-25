@@ -82,26 +82,6 @@ describe('Object module', function () {
 
   });
 
-  context('#toPairsIn(object)', function () {
-
-    it('Should creates an array of own and inherited keyed-value pairs', function () {
-
-      //given
-      function SourceObject() {
-        this.a = 1;
-        this.b = 2;
-      }
-      SourceObject.prototype.c = 3;
-
-      //when
-      let array = _object.toPairsIn(new SourceObject);
-
-      //then
-      expect(array).to.be.eql([['a', 1], ['b', 2], ['c', 3]]);
-    });
-
-  });
-
   context('#get(object, path, [defaultValue])', function () {
 
     it('Should return the value at path of object or default value', function () {

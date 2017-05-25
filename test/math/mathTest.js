@@ -2,12 +2,24 @@
  * Created by svichkar on 5/15/17.
  */
 
-const assert = require('chai').assert;
+const expect = require('chai').expect;
 const _math = require('lodash/math');
 
 describe('Math module', function () {
-  it('should return hello', function () {
-    console.log();
-    assert.equal(2, 2);
-  })
+
+  context("#ceil(number, [precision=0])", function () {
+
+    it('Should return the smallest integer greater than or equal to a given number', function () {
+
+      //given
+      let number = 25.01;
+
+      //when
+      let ceil = _math.ceil(number, -1);
+
+      //then
+      expect(ceil).eq(30);
+    });
+  });
+
 });
